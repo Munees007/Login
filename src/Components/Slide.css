@@ -1,0 +1,36 @@
+.Slide{
+  background-color: #16697a;
+  z-index: 1100;
+  width: 18rem;
+  overflow: hidden;
+  height: 50rem;
+  display: none;
+}
+.para button{
+    position: absolute;
+    z-index:1400;
+    background-color: transparent;
+    color: black;
+    border: none;
+}
+.para button:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+.hello{
+    position: relative;
+    z-index: 1400;
+}
+.onslide{
+    display: block;
+}
+
+.Slide ul{
+    list-style: none;
+    padding: 0rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+    margin-top: 2rem;
+}

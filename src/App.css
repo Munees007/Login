@@ -1,0 +1,16 @@
+body{
+  background-color: #191A2E;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar{
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: #e36588;
+  border-radius: 5px;
+  border: 2px solid #82a3a1;
+}

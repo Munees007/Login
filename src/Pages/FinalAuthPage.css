@@ -1,0 +1,44 @@
+.CenterDiv
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.BackGround{
+    background-color: #0B8DAF;
+    background-size: cover;
+    border: 2px solid white;
+    border-radius: 15px;
+    display: flex;
+    width:fit-content;
+    height: fit-content;
+    align-items: center;  
+}
+.First{
+    width: 100%;
+}
+.Login{
+    padding: 5rem;
+}
+.SignIn{
+    padding: 5rem;
+}
+.First img{
+    width: 26rem;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 15px;
+}
+.Second{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.Second a{
+    text-decoration: none;
+    color: white;
+}
+a
+{
+    margin-top: -3rem;
+}

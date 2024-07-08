@@ -1,0 +1,25 @@
+.ques{
+    display: none;
+}
+.Ques{
+
+    background-color: white;
+    padding: 0.1rem 1rem;
+    margin: 0.2rem 0rem;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+.on{
+    display: block;
+}
+
+.Ques h3{
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.Ques button{
+    margin-left: 10rem;
+    position: relative;
+    padding: 0.5rem 2rem;
+    color: black;
+}

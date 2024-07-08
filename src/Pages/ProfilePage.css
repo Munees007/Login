@@ -1,0 +1,113 @@
+.ProfilePage
+{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: #cde5b4;
+}
+.Middle{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.SideBar{
+    background-color: #82a3a1;
+    width: fit-content;
+    height: 45rem;
+    border: 2px solid black;
+    border-top: none;
+}
+.SideBar ul{
+    list-style: none;
+    padding: 0;
+    padding: 0rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.SideBar ul li{
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    padding: 1rem 0rem;
+    color: #022e64;
+    border-bottom: 2px solid #011936;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.SideBar .icon{
+    margin-right: 1rem;
+    color: #b85726;
+    
+}
+.Contents{
+    margin: 1rem 1rem;
+    margin-bottom: 6rem;
+    border-radius: 10px;
+    width: 100%;
+    padding: 1rem;
+    background-color: #9fc490;
+    border: 2px solid black;
+}
+.ProfileInfo img{
+    width: 10rem;
+    margin: 1rem;
+}
+.ProfileInfo p{
+    font-size: 1.6rem;
+    padding: 0.1rem 1rem;
+    letter-spacing: 0.2rem;
+}
+.ProfileInfo
+{   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.ProfileInfo tr td{
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    border: 2px solid #465362;
+    background-color: #c0dfa1;
+    border-radius: 5px;
+}
+.ProfileInfo table{
+    margin: 1rem;
+    border: 2px solid #f0f3f5;
+    padding: 1rem;
+    background-color: #011936;
+    border-radius: 10px;
+    width: 100%;
+}
+.ProfileInfo tr td:first-child{
+    background-color: #82a3a1;
+}
+.apper{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 3rem;
+    align-items: center;
+    justify-items: center;
+}
+.t{
+    display: flex;
+    color: #011936;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Off{
+    display: none;
+}
+
+.picclick{
+    filter: drop-shadow(0 0 10px green);
+}
+
+#Pro{
+    filter: drop-shadow(0 0 10px black);
+}

@@ -1,0 +1,103 @@
+.Events{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-items: center;
+    align-items: center;
+    overflow: hidden;
+
+}
+.Event{
+    width: 20rem;
+    height:fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    margin: 2rem 0rem;
+    background-color: #028090;
+    border-radius: 10px;
+    border: 2px solid white;
+    text-align: center;
+    animation: anic 3s infinite;
+}
+.Event1 img,.Event2 img{
+    width: 8rem;
+    animation: anic 3s infinite;
+}
+.Event1 h1,.Event2 h1{
+    color: #f0f3bd;
+    font-family: 'Roboto';
+    font-style: italic;
+}
+@keyframes anic{
+    0%{
+        filter: drop-shadow(0 0 8px #04e762);
+    }
+    25%{
+        filter: drop-shadow(0 0 10px #f5b700);
+    }
+    50%{
+        filter: drop-shadow(0 0 8px #dc0073);
+    }
+    75%{
+        filter: drop-shadow(0 0 8px #008bf8);
+    }
+    100%{
+        filter: drop-shadow(0 0 8px #89fc00);
+    }
+}
+@keyframes anic{
+    0%{
+        filter: drop-shadow(0 0 8px #04e762);
+    }
+    25%{
+        filter: drop-shadow(0 0 10px #f5b700);
+    }
+    50%{
+        filter: drop-shadow(0 0 8px #dc0073);
+    }
+    75%{
+        filter: drop-shadow(0 0 8px #008bf8);
+    }
+    100%{
+        filter: drop-shadow(0 0 8px #89fc00);
+    }
+}
+.Event2:hover{
+    cursor:pointer;
+}
+.Event3:hover{
+    cursor:not-allowed;
+}
+.Event4:hover{
+    cursor:not-allowed;
+}
+.Event1:hover{
+    cursor:pointer;
+}
+.Event3 img ,.Event4 img {
+    width: 12rem;
+    filter: blur(0.2rem);
+}
+
+.Event3,.Event4{
+    background-color: #313744;
+}
+
+.Event1 img , .Event1 h1{
+    animation: anif 3s infinite, anic 3s infinite;;
+}
+
+@keyframes anif{
+    0%{
+        transform: scale(0.9);
+    }
+    50%{
+        transform: scale(1);
+    }
+    100%
+    {
+        transform: scale(0.9);
+    }
+}

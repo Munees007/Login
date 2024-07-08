@@ -1,0 +1,45 @@
+.Editor{
+    display: flex;
+    padding: 1rem;
+
+}
+.Output{
+    width: 32rem;
+    margin-left: 0.3rem;
+    border: 2px solid #ffa62b;
+    border-radius: 5px;
+    position: relative;
+}
+.Output h1,.Output p{
+    padding: 0rem 1rem;
+}
+.aceEditor{
+    border: 2px solid #ffa62b;
+    border-radius: 5px;
+    position: relative;
+    
+}
+.Overall{
+    display: flex;
+    flex-direction: column;
+    background-color: #489fb5;
+    border: 2px solid #ffa62b;
+    margin: 1rem;
+    border-radius: 5px;
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+
+.Btn{
+    padding: 0.5rem 2rem;
+    margin-right: 1rem;
+    border-radius: 5px;
+    border: 2px solid #ffa62b;
+}
+

@@ -1,0 +1,14 @@
+.pic{
+    width: 7rem;
+    filter: drop-shadow(0 0 10px white);
+}
+
+.pic:hover{
+    cursor: pointer;
+}
+
+.pic.selected{
+    border: 5px solid #007034;
+    filter: drop-shadow(0 0 10px #007034);
+    border-radius: 50%;
+}

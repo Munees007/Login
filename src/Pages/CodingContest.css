@@ -1,0 +1,35 @@
+.Contest{
+    display: flex;
+    overflow: hidden;
+}
+.Question{
+    display: block;
+}
+.startscreen{
+
+    text-align: center;
+    color : #f1faee;
+    justify-content: center;
+    margin: 2rem;
+    background-color: #457b9d;
+    border: 2px solid #a8dadc;
+    border-radius: 10px;
+}
+.startscreen p{
+    font-size:3rem;
+    padding: 1rem 2rem;
+    text-shadow: 5px 3px 8px black,3px 5px 8px black;
+}
+.firststart{
+    margin: 1rem;
+    padding: 1rem 2rem;
+    border: 2px solid #a8dadc;
+    color: #a8dadc;
+    text-shadow: 5px 3px 8px black;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    background-color: #1d3557;
+}
+.off{
+    display: none;
+}
