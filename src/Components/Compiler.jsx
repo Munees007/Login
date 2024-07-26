@@ -66,7 +66,7 @@ const Compiler = ({show,no}) => {
   },[IsCodeChanged])
 
   useEffect(() => {
-    //console.log(result);
+    console.log(result);
   }, [result,number]);
 
   const handleNumber = ()=>{

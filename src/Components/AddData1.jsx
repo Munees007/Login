@@ -1,18 +1,28 @@
-import { ref,set} from "firebase/database";
+import { ref, set, get, update } from "firebase/database";
 import { database1 } from "../firebase1";
 
-// Function to add a new document to the database
-export const addDocToRealtimeDB1 = async (collectionPath,customKey, data) => {
-  try {
-    // Generate a new unique key for the document
-    const docRef = ref(database1, `${collectionPath}/${customKey}`);
-
-    // Push the data to the collection
-    await set(docRef, data);
-    // Return the newly generated key
-    return customKey;
-  } catch (error) {
-    console.error("Error adding document to Realtime Database:", error);
-    throw error;
-  }
+// Function to add or update a document in the database
+export const addOrUpdateDocInRealtimeDB1 = async (collectionPath, customKey,questionId, data) => {
+    try {
+      // Reference to the question data for the user
+      const questionRef = ref(database1, `${collectionPath}/${customKey}/${questionId}`);
+  
+      // Check if the question data exists
+      const snapshot = await get(questionRef);
+  
+      if (snapshot.exists()) {
+        // Question data exists, update it
+        await update(questionRef, data);
+      } else {
+        // Question data does not exist, create it
+        await set(questionRef, data);
+      }
+  
+      // Return the question ID
+      return questionId;
+    } 
+    catch (error) {
+      console.error("Error adding or updating question data:", error);
+      throw error;
+    }
 };

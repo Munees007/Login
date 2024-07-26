@@ -39,7 +39,7 @@ const Slide = ({parenetFunction,secondparent})=>{
       },[CurrentQuestion])
      return(
         <div className="para">
-           <button ref={btn} onClick={()=>{SetshowSlide(!showSlide);parenetFunction(!showSlide);changepos();}}>{!showSlide ? <IoIosArrowForward size={30}/> : <IoIosArrowBack size={30}/>}</button>
+           <button ref={btn} onClick={()=>{SetshowSlide(!showSlide);parenetFunction(!showSlide);changepos();}}>{!showSlide ? <IoIosArrowForward size={30} className="iconSlide"/> : <IoIosArrowBack size={30} className="iconSlide"/>}</button>
         <div className={`Slide ${showSlide ? "onslide":""}`}>
             <ul>
                 <li><Question Question={questions[m].question1} no={"1"}  parentfun={HandleQuestion} QuestionNo={OnOff} IsVisible={CurrentQuestion==="1"}/></li>

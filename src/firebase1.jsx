@@ -13,8 +13,8 @@ const firebaseConfig = {
   measurementId: "G-STFTQB0SC0"
 };
 
-const app1 = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-const database1 = getDatabase(app);
+const app1 = initializeApp(firebaseConfig,"app1");
+const analytics = getAnalytics(app1);
+const database1 = getDatabase(app1);
 
 export  {app1, database1};

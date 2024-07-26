@@ -7,6 +7,9 @@ import "./themes";
 import "./languages";
 import "./Editor.css";
 import DropDownComponent from "./DropDownComponent";
+import { addOrUpdateDocInRealtimeDB1 } from "./AddData1";
+import toast from "react-hot-toast";
+import { auth } from "../firebase";
 
 const Editor = ({ executeRun, Result ,showslide,fun}) => {
   const [theme, SetTheme] = useState("");
@@ -14,6 +17,11 @@ const Editor = ({ executeRun, Result ,showslide,fun}) => {
   const [code, SetCode] = useState("");
   const Overall = useRef(null);
   const [divWidth,setdivWidth] = useState(1000);
+  useEffect(()=>{
+      const fetchData = async() =>{
+        
+      }
+  },[])
   const handleSelect = (value) => {
     console.log("Selected:", value);
     SetTheme(value);
@@ -72,7 +80,28 @@ const Editor = ({ executeRun, Result ,showslide,fun}) => {
     { label: "Python", value: "python" },
     { label: "C#", value: "csharp" },
     { label: "JavaScript", value: "javascript" },
+    { label: "HTML", value: "html" },
   ];
+
+  const OnSave = async () =>{
+      try {
+        const id = await auth.currentUser.uid;
+        const outputValue = document.getElementById("output").value; 
+        console.log(Result?.result?.output);
+        const res = await addOrUpdateDocInRealtimeDB1("userCodeData",id,fun(),{
+          array_num : fun(),
+          Program:{
+
+            code:code,
+            output:Result?.result?.output
+          },
+          score : 0
+        })
+        toast.success("Saved");
+      } catch (error) {
+          toast.error(error.code);
+      }
+  }
   
   useEffect(()=>{
     const handleresize = ()=>{
@@ -110,11 +139,12 @@ const Editor = ({ executeRun, Result ,showslide,fun}) => {
           Run
         </button>
         <button
+          onClick={OnSave}
           className={`Btn ${theme !== "" ? "ace-" + theme : "ace-twilight"}`}
         >
           Save
         </button>
-        <h1 className={theme !=="" ? "ace-" + theme : "ace-twilight"}>Question{fun()}</h1>
+        <h1 className={theme !=="" ? "ace-" + theme : "ace-twilight qusetionS"}>Question{fun()}</h1>
       </div>
       <div className="Editor">
         <div className="aceEditor">
@@ -138,7 +168,7 @@ const Editor = ({ executeRun, Result ,showslide,fun}) => {
           className={`Output ${theme !== "" ? "ace-" + theme : "ace-twilight"}`}
         >
           <h1>Output:</h1>
-          <p>{Result?.result?.output}</p>
+          <p id="output">{Result?.result?.output}</p>
         </div>
       </div>
     </div>
